@@ -14,8 +14,18 @@ function calculate() {
     const operator = operatorSelect.value;
 
     let result
-    if( operator === "+") {
-        result = num1 + num2
+
+    // if num 1 is not a number or num 2 is not a number, make result "Two numbers were not given. Please try again."
+
+    if (true) // Change to else statement once if statement above is complete.
+    {
+        if (operator === "+") {result = num1 + num2}
+
+        else if (operator === "-") {result = num1 - num2}
+
+        else if (operator === "*") {result = num1 * num2}
+
+        else if (operator === "/") {result = num1 / num2}
     }
     
     // Step 3 - update the result span with the result of the calculation
