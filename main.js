@@ -15,9 +15,9 @@ function calculate() {
 
     let result
 
-    // if num 1 is not a number or num 2 is not a number, make result "Two numbers were not given. Please try again."
+    if (isNaN(num1) || isNaN(num2)) {result = "Two numbers were not given. Please try again."}
 
-    if (true) // Change to else statement once if statement above is complete.
+    else
     {
         if (operator === "+") {result = num1 + num2}
 
@@ -25,7 +25,12 @@ function calculate() {
 
         else if (operator === "*") {result = num1 * num2}
 
-        else if (operator === "/") {result = num1 / num2}
+        else if (operator === "/") 
+            {
+                if (num2 === 0) {result = "You divided by zero. Your computer will now self destruct."}
+
+                else {result = Math.round((num1 / num2) * 100) / 100}
+            }
     }
     
     // Step 3 - update the result span with the result of the calculation
